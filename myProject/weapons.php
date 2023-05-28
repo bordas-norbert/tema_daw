@@ -23,25 +23,25 @@
 
   <div class="mySlides fade">
     <div class="numbertext">1 / 4</div>
-    <img src="shooter_1.png" style="width:100%">
+    <img src="src/shooter_1.png" style="width:100%">
     <div class="text">Best zombie shooter game is almost here!</div>
   </div>
 
   <div class="mySlides fade">
     <div class="numbertext">2 / 4</div>
-    <img src="shooter_2.png" style="width:100%">
+    <img src="src/shooter_2.png" style="width:100%">
     <div class="text">Stunning graphics and multiplayer campaign missions</div>
   </div>
 
   <div class="mySlides fade">
     <div class="numbertext">3 / 4</div>
-    <img src="shooter_3.png" style="width:100%">
+    <img src="src/shooter_3.png" style="width:100%">
     <div class="text">Over 50 types of zombies with special abilities</div>
   </div>
 
   <div class="mySlides fade">
     <div class="numbertext">4 / 4</div>
-    <img src="shooter_4.png" style="width:100%">
+    <img src="src/shooter_4.png" style="width:100%">
     <div class="text">Don't miss out! Preorder now!</div>
   </div>
   
@@ -61,7 +61,7 @@
         </div>
 
         <div class="grid-item">
-            <img src="weaponimg_1.png" class="weapon-img">
+            <img src="src/weaponimg_1.png" class="weapon-img">
         </div>
 
         <div class="grid-item">
@@ -75,7 +75,7 @@
         </div>
 
         <div class="grid-item">
-            <img src="weaponimg_2.png" class="weapon-img">
+            <img src="src/weaponimg_2.png" class="weapon-img">
         </div>
 
         <div class="grid-item">
@@ -88,7 +88,7 @@
         </div>
 
         <div class="grid-item">
-            <img src="weaponimg_3.png" class="weapon-img">
+            <img src="src/weaponimg_3.png" class="weapon-img">
         </div>
 
     </div>

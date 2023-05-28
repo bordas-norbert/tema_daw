@@ -12,45 +12,44 @@
 <body class="body">
 
 <div id="container_principal"> 
- <!-- HEADER ZONE --> 
+
  <div id="header">	
 	<h1 class="h1">Zombie Shooter</h1>
  </div>
  
- <!-- Slideshow container -->
+
  <div class="slideshow-container">
 
-  <!-- Full-width images with number and caption text -->
+
   <div class="mySlides fade">
     <div class="numbertext">1 / 4</div>
-    <img src="shooter_1.png" style="width:100%">
+    <img src="src/shooter_1.png" style="width:100%">
     <div class="text">Best zombie shooter game is almost here!</div>
   </div>
 
   <div class="mySlides fade">
     <div class="numbertext">2 / 4</div>
-    <img src="shooter_2.png" style="width:100%">
+    <img src="src/shooter_2.png" style="width:100%">
     <div class="text">Stunning graphics and multiplayer campaign missions</div>
   </div>
 
   <div class="mySlides fade">
     <div class="numbertext">3 / 4</div>
-    <img src="shooter_3.png" style="width:100%">
+    <img src="src/shooter_3.png" style="width:100%">
     <div class="text">Over 50 types of zombies with special abilities</div>
   </div>
 
   <div class="mySlides fade">
     <div class="numbertext">4 / 4</div>
-    <img src="shooter_4.png" style="width:100%">
+    <img src="src/shooter_4.png" style="width:100%">
     <div class="text">Don't miss out! Preorder now!</div>
   </div>
   
-  <!-- Next and previous buttons -->
+
   <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
   <a class="next" onclick="plusSlides(1)">&#10095;</a>
  </div>
 
-<!-- Menu zone -->
  
  <div id="menu">
 	<ul>
@@ -124,7 +123,7 @@
   and we can't wait for players to get their hands on it.
   </p></div>
   <div id="col3">
-    <h1>Parteneri</h1>
+    <h1>Partners</h1>
     <br>
     <a href="https://www.ubisoft.com/en-us/">Ubisoft</a> <br>
     <a href="https://www.riotgames.com/en">Riot Games</a>
