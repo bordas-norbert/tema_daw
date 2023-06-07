@@ -1,0 +1,36 @@
+
+<html>
+<head>
+    <title>{{ title }}</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+    </style>
+    <link rel="stylesheet" href="{{ stylesheet1 }}">
+</head>
+<body class="body">
+    <div id="container_principal"> 
+
+        <div id="header">    
+            <h1 class="h1">{{ heading }} | 
+            <a href="index.php">Home</a>
+            </h1>
+        </div>
+        <div>
+            <form method="post" action="register_user.php">
+            {% for formData in formDatas %}
+                <div>
+                    <label for="input{{formData.id}}">{{formData.label}}</label>
+                    <input type="text" id="input{{formData.id}}" name="input{{formData.id}}">
+                </div>
+            {% endfor %}
+                <input type="submit" id="SubmitBtn" value="Submit" formaction="register_user.php">
+            </form>
+        </div>
+           
+    </div>
+
+</body>
+   {# {% for jsFile in jsFiles %}
+    <script src="{{ jsFile }}"></script>
+    {% endfor %}#}
+</html>

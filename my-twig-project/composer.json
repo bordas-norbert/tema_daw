@@ -1,0 +1,18 @@
+{
+    "name": "user/my-twig-project",
+    "autoload": {
+        "psr-4": {
+            "User\\MyTwigProject\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "bordas-norbert",
+            "email": "b.norbert101@gmail.com"
+        }
+    ],
+    "require": {
+        "twig/twig": "^3.6",
+        "php-ds/php-ds": "^1.4"
+    }
+}

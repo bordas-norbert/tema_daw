@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Weapons</title>
+<style>
+	@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+</style>
+<link rel="stylesheet" href="site_styles.css">
+<link rel="stylesheet" href="dropdown.css">
+<link rel="stylesheet" href="slideshow.css">
+<link rel="stylesheet" href="weapons.css">
+</head>
+<body class="body">
+
+<div id="container_principal"> 
+ <div id="header">	
+   <h1 class="h1">Weapons |
+   <a href="http://localhost/my-twig-project/index.php">Home</a>
+   </h1>
+ </div>
+ 
+ <div class="slideshow-container">
+
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 4</div>
+    <img src="shooter_1.png" style="width:100%">
+    <div class="text">Best zombie shooter game is almost here!</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 4</div>
+    <img src="shooter_2.png" style="width:100%">
+    <div class="text">Stunning graphics and multiplayer campaign missions</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 4</div>
+    <img src="shooter_3.png" style="width:100%">
+    <div class="text">Over 50 types of zombies with special abilities</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">4 / 4</div>
+    <img src="shooter_4.png" style="width:100%">
+    <div class="text">Don't miss out! Preorder now!</div>
+  </div>
+  
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+ </div>
+
+ <div id="menu">
+	<div class="grid-container">
+        {% for description in weaponsDescription %}
+        <div class="grid-item">
+            <p>{{description.text}}</p>
+        </div>
+
+        <div class="grid-item">
+            <img src="weaponimg_{{description.id}}.png" class="weapon-img">
+        </div>
+        {% endfor %}
+       
+
+    </div>
+ <div id="footer">
+	All rights reserved. &copy; Firma XY 2021.
+ </div>
+ 
+</div>
+<script src="automaticslideshow.js"></script>
+<script src="slideshow.js"></script>
+
+</body>
+</html>

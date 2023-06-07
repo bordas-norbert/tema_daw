@@ -1,0 +1,51 @@
+
+<html>
+<head>
+    <title>{{ title }}</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+    </style>
+    <link rel="stylesheet" href="{{ stylesheet1 }}">
+    <link rel="stylesheet" href="{{ stylesheet2 }}">
+    <link rel="stylesheet" href="{{ stylesheet3 }}">
+</head>
+<body class="body">
+    <div id="container_principal"> 
+
+        <div id="header">    
+            <h1 class="h1">{{ heading }} | 
+                <a href="http://localhost/my-twig-project/index.php">Home</a>
+            </h1>
+
+        </div>
+        
+        
+        
+        <div id="menu"> 
+            <div>
+                <form method="post" action="register_user.php">
+                {% for formData in formDatas %}
+                    <div>
+                        <label for="input{{formData.id}}">{{formData.label}}</label>
+                        <input type="text" id="input{{formData.id}}" name="input{{formData.id}}">
+                    </div>
+                {% endfor %}
+                    {% if showButton == 'true' %}
+                    <input type="submit" id="SubmitBtn" value="Submit" formaction="login_user.php">
+                    {% endif %}
+                </form>
+            </div>
+        </div> 
+        {% if errorMessage == "ok" %}
+            <p>Succesful login attempt</p>
+            {% elseif errorMessage == "unkown_user" %}
+            <a href ="http://localhost/my-twig-project/register.php">Please register first by clicking here</a>
+        {% endif %}
+           
+    </div>
+
+</body>
+   {# {% for jsFile in jsFiles %}
+ 
+    {% endfor %}#}
+</html>

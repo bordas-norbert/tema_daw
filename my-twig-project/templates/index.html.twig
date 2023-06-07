@@ -1,0 +1,105 @@
+
+<html>
+<head>
+    <title>{{ title }}</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+    </style>
+    <link rel="stylesheet" href="{{ stylesheet1 }}">
+    <link rel="stylesheet" href="{{ stylesheet2 }}">
+    <link rel="stylesheet" href="{{ stylesheet3 }}">
+</head>
+<body class="body">
+    <div id="container_principal"> 
+
+        <div id="header">    
+            <h1 class="h1">{{ heading }} | 
+                <a href="http://localhost/my-twig-project/register.php">Register</a> |
+                <a href="http://localhost/my-twig-project/login.php">Login</a>
+            </h1>
+            {% if session.loggedin %}
+            <form action="logout.php" method="post">
+            <button class="btn btn-primary" type="submit">Logout</button>
+            </form>
+            {% endif %}
+            
+        </div>
+        
+        <div class="slideshow-container">
+            {% for slide in slides %}
+             <div class="mySlides fade">
+                <div class="numbertext">{{ slide.number }} / {{ slide.total }}</div>
+                <img src="{{ slide.image }}" style="width:100%">
+                <div class="text">{{ slide.text }}</div>
+            </div> 
+            {% endfor %}
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        
+        <div id="menu">  
+            
+            <ul>
+                {% for dropdownElement in dropdownElements %}
+                    <li class="dropdown">
+                        <a>{{ dropdownElement.hrefText}}</a>
+                            <ul class="dropdown-content">
+                                <li><a href="{{dropdownElement.URL}}">{{ dropdownElement.hrefPageName }}</a> 
+                                </li>
+
+                            </ul>
+                    </li>
+                {% endfor %}
+	        </ul> 
+            {% for columnDiv in columnDivs %}
+                <div id="{{ columnDiv.colNr }}">
+                    {% for comments in columnDiv.divContent %}
+                        {% if columnDiv.colNr == 'col2' %}
+                            <h1>Zombie Shooter</h1>
+                         {% endif %}
+                        <p>{{comments}}</p>
+
+                    {% endfor %}
+
+                    {% set counter = 1 %}
+
+                    {% if columnDiv.colNr == 'col1' %}
+                        {% for comments in columnDiv.divContentCol1 %}
+                            <p>{{comments}}</p>
+                            {% if session.isAdminLoggedIn %}
+                            <button id="deleteComment" commentNr="{{counter}}">Delete</button>
+                            {% set counter = counter + 1 %}
+                            {% endif %}
+                        {% endfor %}
+                        {% if session.loggedin  %}
+                            <form method="post" action="insert.php">
+                            <label for="input">Add comment:</label>
+                            <input type="text" id="input" name="input">
+                            <button class="btn btn-primary" type="submit">Submit</button>
+                            </form>
+                        {% endif %}
+                    {% endif %}
+
+                    {% if columnDiv.colNr == 'col3' %}
+                        {% for colText in colThree %}
+                            <p>{{colText}}</p>
+                        {% endfor %}
+                    {% endif %}
+
+                </div>
+            {% endfor %}
+
+           
+        </div>
+            <div id="footer">
+	          All rights reserved. &copy; GamingBros 2023.
+            </div>
+    </div>
+    {% for jsFile in jsFiles %}
+        <script src="{{ jsFile }}"></script>
+        
+        {% endfor %}
+        <script src="delete_comment.js"></script>
+</body>
+    
+</html>
